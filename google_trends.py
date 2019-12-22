@@ -7,10 +7,10 @@ pytrends = TrendReq(hl='en-US', tz=480, retries=3, backoff_factor=0.2)
 
 here = os.path.dirname(__file__)
 
-OUTPUT_FILE="ounces_to_pounds_vs_7000_google_trends_350.csv"
+OUTPUT_FILE="ounces_to_pounds_vs_7000_google_trends_700.csv"
 SEARCH_TERMS = "search_terms.csv"
-start_term_idx = 0
-end_term_idx = 350
+start_term_idx = 350
+end_term_idx = 700
 REF_TERM = "Ounces in Pound"
 
 
