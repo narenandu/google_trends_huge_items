@@ -1,0 +1,21 @@
+sleep 3600; python google_trends.py 0 350
+sleep 3600; python google_trends.py 350 700
+sleep 3600; python google_trends.py 700 1050
+sleep 3600; python google_trends.py 1050 1400
+sleep 3600; python google_trends.py 1400 1750
+sleep 3600; python google_trends.py 1750 2100
+
+sleep 3600; python google_trends.py 2100 2450
+sleep 3600; python google_trends.py 2450 2800
+sleep 3600; python google_trends.py 2800 3150
+sleep 3600; python google_trends.py 3150 3500
+sleep 3600; python google_trends.py 3500 3850
+sleep 3600; python google_trends.py 3850 4200
+sleep 3600; python google_trends.py 4200 4550
+sleep 3600; python google_trends.py 4550 4900
+sleep 3600; python google_trends.py 4900 5250
+sleep 3600; python google_trends.py 5250 5600
+sleep 3600; python google_trends.py 5600 5950
+sleep 3600; python google_trends.py 5950 6300
+sleep 3600; python google_trends.py 6300 6650
+sleep 3600; python google_trends.py 6650 7000

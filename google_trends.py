@@ -4,7 +4,7 @@ import time
 import pandas as pd
 from pytrends.request import TrendReq
 
-pytrends = TrendReq(hl='en-US', tz=480, retries=3, backoff_factor=0.2)
+pytrends = TrendReq(hl='en-US', tz=360, retries=10, backoff_factor=0.5)
 
 here = os.path.dirname(__file__)
 
@@ -28,7 +28,7 @@ def main(start, end):
     for i, term in enumerate(terms):
         if i % 25 == 0:
             print("processing ... i, term: {} -> {}...".format(i, term))
-        time.sleep(0.25)
+        time.sleep(0.5)
         pytrends.build_payload([REF_TERM, term], timeframe="2015-11-01 2019-12-20", geo='US')
         df = pytrends.interest_over_time()
         df_ = df.drop("isPartial", axis=1)
