@@ -7,12 +7,11 @@ pytrends = TrendReq(hl='en-US', tz=480, retries=3, backoff_factor=0.2)
 
 here = os.path.dirname(__file__)
 
-OUTPUT_FILE="ounces_to_pounds_vs_7000_google_trends_700.csv"
 SEARCH_TERMS = "search_terms.csv"
-start_term_idx = 350
-end_term_idx = 700
+start_term_idx = 700
+end_term_idx = 1050
 REF_TERM = "Ounces in Pound"
-
+OUTPUT_FILE="ounces_to_pounds_vs_7000_google_trends_1050.csv"
 
 def get_terms(start_idx=start_term_idx, end_idx=end_term_idx):
     terms_file = os.path.join(here, SEARCH_TERMS)
@@ -26,7 +25,7 @@ terms = get_terms()
 for i, term in enumerate(terms):
     if i % 25 == 0:
         print("processing ... i, term: {} -> {}...".format(i, term))
-    time.sleep(0.25)
+    time.sleep(1)
     pytrends.build_payload([REF_TERM, term], timeframe="2015-11-01 2019-12-20", geo='US')
     df = pytrends.interest_over_time()
     df_ = df.drop("isPartial", axis=1)
