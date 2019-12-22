@@ -7,16 +7,17 @@ pytrends = TrendReq(hl='en-US', tz=480, retries=3, backoff_factor=0.2)
 
 here = os.path.dirname(__file__)
 
-OUTPUT_FILE="ounces_to_pounds_vs_7000_google_trends.csv"
+OUTPUT_FILE="ounces_to_pounds_vs_7000_google_trends_350.csv"
 SEARCH_TERMS = "search_terms.csv"
-NUM_TERMS_TO_READ = 7000
+start_term_idx = 0
+end_term_idx = 350
 REF_TERM = "Ounces in Pound"
 
 
-def get_terms(num_terms=NUM_TERMS_TO_READ):
+def get_terms(start_idx=start_term_idx, end_idx=end_term_idx):
     terms_file = os.path.join(here, SEARCH_TERMS)
     terms_df = pd.read_csv(terms_file)
-    act = terms_df.head(num_terms).Act
+    act = terms_df[start_idx:end_idx].Act
     print(act.values)
     return act.values
 
