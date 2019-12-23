@@ -1,13 +1,12 @@
-sleep 3600; python google_trends.py 0 350
-sleep 3600; python google_trends.py 350 700
-sleep 3600; python google_trends.py 700 1050
-sleep 3600; python google_trends.py 1050 1400
-sleep 3600; python google_trends.py 1400 1750
-sleep 3600; python google_trends.py 1750 2100
-
-sleep 3600; python google_trends.py 2100 2450
-sleep 3600; python google_trends.py 2450 2800
-sleep 3600; python google_trends.py 2800 3150
+sleep 3600; python google_trends.py 0 350       # DONE
+sleep 3600; python google_trends.py 350 700     # DONE
+sleep 3600; python google_trends.py 700 1050    # DONE
+sleep 3600; python google_trends.py 1050 1400   # DONE
+sleep 3600; python google_trends.py 1400 1750   # ........Failed .. keeps failing after 50th term in sequence
+sleep 3600; python google_trends.py 1750 2100   # DONE
+sleep 3600; python google_trends.py 2100 2450   # ........Failed
+sleep 3600; python google_trends.py 2450 2800   # DONE
+sleep 3600; python google_trends.py 2800 3150   # DONE
 sleep 3600; python google_trends.py 3150 3500
 sleep 3600; python google_trends.py 3500 3850
 sleep 3600; python google_trends.py 3850 4200
