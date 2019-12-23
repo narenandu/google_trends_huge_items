@@ -12,7 +12,7 @@ sleep 5000; python google_trends.py 3500 3850   # DONE
 sleep 5000; python google_trends.py 3850 4200   # DONE
 sleep 5000; python google_trends.py 4200 4550   # DONE
 sleep 5000; python google_trends.py 4550 4900   # DONE 
-sleep 5000; python google_trends.py 4900 5250   # Progress
+sleep 5000; python google_trends.py 4900 5250   # DONE
 sleep 5000; python google_trends.py 5250 5600
 sleep 5000; python google_trends.py 5600 5950   
 sleep 5000; python google_trends.py 5950 6300
