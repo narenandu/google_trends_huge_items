@@ -4,7 +4,13 @@ import time
 import pandas as pd
 from pytrends.request import TrendReq
 
-pytrends = TrendReq(hl='en-US', tz=360, retries=10, backoff_factor=0.5)
+# pytrends = TrendReq(hl='en-US', tz=360, retries=10, backoff_factor=0.5)
+pytrends = TrendReq(hl='en-US',
+                tz=360,
+                timeout=(10,25),
+                proxies=['https://34.203.233.13:80','https://35.201.123.31:880'],
+                retries=2,
+                backoff_factor=0.1)
 
 here = os.path.dirname(__file__)
 
@@ -24,8 +30,8 @@ def get_terms(start_idx=start_term_idx, end_idx=end_term_idx):
 def main(start, end):
 
     terms = get_terms(start, end)
-    print(terms)
     for i, term in enumerate(terms):
+        print("term: {}".format(term))
         if i % 25 == 0:
             print("processing ... i, term: {} -> {}...".format(i, term))
         time.sleep(0.5)
