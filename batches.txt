@@ -13,8 +13,8 @@ sleep 5000; python google_trends.py 3850 4200   # DONE
 sleep 5000; python google_trends.py 4200 4550   # DONE
 sleep 5000; python google_trends.py 4550 4900   # DONE 
 sleep 5000; python google_trends.py 4900 5250   # DONE
-sleep 5000; python google_trends.py 5250 5600
-sleep 5000; python google_trends.py 5600 5950   
+sleep 6000; python google_trends.py 5250 5600   # DONE
+sleep 6000; python google_trends.py 5600 5950   
 sleep 5000; python google_trends.py 5950 6300
 sleep 5000; python google_trends.py 6300 6650
 sleep 5000; python google_trends.py 6650 7000   
